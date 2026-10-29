@@ -1,7 +1,10 @@
 package interpreter;
 
+import interpreter.view.TextMenu;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Toy Language Interpreter initialized.");
+        TextMenu menu = new TextMenu();
+        menu.show();
     }
 }
