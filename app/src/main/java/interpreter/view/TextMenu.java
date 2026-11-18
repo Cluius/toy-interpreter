@@ -58,7 +58,7 @@ public class TextMenu {
         PrgState state = PrgState.of(
                 selectedProgram
         );
-        IRepository repo = new Repository(state);
+        IRepository repo = new Repository(state,"log.txt");
         Controller controller = new Controller(repo, true);
 
         try {
