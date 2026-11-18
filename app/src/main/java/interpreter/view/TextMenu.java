@@ -55,10 +55,7 @@ public class TextMenu {
     }
 
     private void runSelectedProgram() {
-        PrgState state = new PrgState(
-                new MyStack<>(),
-                new MyDictionary<>(),
-                new MyList<>(),
+        PrgState state = PrgState.of(
                 selectedProgram
         );
         IRepository repo = new Repository(state);

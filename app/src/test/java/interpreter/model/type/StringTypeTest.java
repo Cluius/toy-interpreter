@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringTypeTest {
     @Test
     void stringVariableGetsEmptyStringDefaultValue() throws MyException {
-        PrgState state = new PrgState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), null);
+        PrgState state =  PrgState.of(null);
         new VarDeclStmt("s", new StringType()).execute(state);
         assertEquals(new StringValue(""), state.getSymTable().lookup("s"));
     }
